@@ -34,8 +34,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         toolbar=findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setTitle("MrRoom");
-        getSupportActionBar().setSubtitle("Your Instant Room Partner");
 
         viewPager=findViewById(R.id.viewpager);
         setupFm(getSupportFragmentManager(),viewPager);
@@ -61,32 +59,26 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         switch(item.getItemId()){
             case R.id.home:
                 viewPager.setCurrentItem(0);
-                getSupportActionBar().setTitle("MrRoom");
-                getSupportActionBar().setSubtitle("Your Instant Room Partner");
+
 
                 break;
             case R.id.email:
                 viewPager.setCurrentItem(1);
-                getSupportActionBar().setTitle("Mail us");
-                getSupportActionBar().setSubtitle("Happy to Help!");
+
 
                 break;
             case R.id.profile:
                 viewPager.setCurrentItem(2);
-                getSupportActionBar().setTitle("Profile");
-                getSupportActionBar().setSubtitle("Manage Settings");
+
 
                 break;
             case R.id.manager:
                 viewPager.setCurrentItem(3);
-                getSupportActionBar().setTitle("Personal Rent Manager");
-                getSupportActionBar().setSubtitle("Hey,You!");
 
                 break;
             case R.id.alert:
                 viewPager.setCurrentItem(4);
-                getSupportActionBar().setTitle("Notification");
-                getSupportActionBar().setSubtitle("Always Stay Updated");
+
 
                 break;
         }
@@ -107,9 +99,7 @@ public  class PageChange implements ViewPager.OnPageChangeListener{
 
         switch (position) {
             case 0:
-
                 bottomNavigationView.setSelectedItemId(R.id.home);
-
                 break;
             case 1:
                 bottomNavigationView.setSelectedItemId(R.id.email);

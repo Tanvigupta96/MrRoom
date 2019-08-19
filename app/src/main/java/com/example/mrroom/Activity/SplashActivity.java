@@ -13,7 +13,7 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.splash_activity);
 
         splashThread = new Thread() {
             @Override
@@ -48,9 +48,5 @@ public class SplashActivity extends AppCompatActivity {
         pintent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(pintent);
     }
-
-
-
-
 
 }
