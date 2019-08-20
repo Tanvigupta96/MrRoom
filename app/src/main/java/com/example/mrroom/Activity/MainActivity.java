@@ -41,6 +41,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        getSupportActionBar().setTitle("MrRoom");
+        getSupportActionBar().setSubtitle("Your Instant Room Partner");
+
         drawerLayout = findViewById(R.id.drawer);
 
 

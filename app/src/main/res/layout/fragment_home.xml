@@ -21,8 +21,8 @@
             android:layout_marginTop="8dp"
             android:background="#eeeeee"
             android:text="Recommended Areas"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textSize="12sp"
+            android:textStyle="bold"/>
 
 
         <android.support.v7.widget.RecyclerView
@@ -44,7 +44,7 @@
             android:background="#eeeeee"
             android:shadowColor="#696868"
             android:text=" Hey! Which type of room do you want to live in?"
-            android:textSize="16sp"
+            android:textSize="12sp"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -99,8 +99,9 @@
             android:layout_marginTop="8dp"
             android:background="#eeeeee"
             android:text="Find Best Accommodation in Kanpur City"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -133,6 +134,27 @@
 
         </LinearLayout>
 
+        <View
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/reserve"
+            android:layout_marginTop="15dp"
+            android:elevation="4dp"/>
+
+        <View
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"/>
+
+
         <TextView
             android:id="@+id/services"
             android:layout_width="match_parent"
@@ -141,7 +163,7 @@
             android:layout_marginTop="10dp"
             android:background="#eeeeee"
             android:text="Our Services"
-            android:textSize="16sp"
+            android:textSize="12sp"
             android:textStyle="bold" />
 
 
@@ -153,6 +175,8 @@
             android:layout_marginTop="15dp">
 
         </android.support.v7.widget.RecyclerView>
+
+
 
 
     </LinearLayout>
