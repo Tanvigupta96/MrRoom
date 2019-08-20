@@ -1,5 +1,6 @@
 package com.example.mrroom.Activity;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
@@ -11,6 +12,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.view.MenuItem;
 
 import com.example.mrroom.Adapter.FragmentAdapter;
@@ -20,6 +22,8 @@ import com.example.mrroom.Fragment.ManagerFragment;
 import com.example.mrroom.Fragment.NotificationFragment;
 import com.example.mrroom.Fragment.ProfileFragment;
 import com.example.mrroom.R;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener, NavigationView.OnNavigationItemSelectedListener {
     ViewPager viewPager;
@@ -46,8 +50,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         mtoggle.syncState();
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("MrRoom");
-        getSupportActionBar().setSubtitle("Your Instant Room Partner");
+
 
         bottomNavigationView = findViewById(R.id.navigation);
         navigationView=findViewById(R.id.nav_view);
@@ -93,7 +96,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             case R.id.home:
                 getSupportActionBar().setTitle("MrRoom");
                 getSupportActionBar().setSubtitle("Your Instant Room Partner");
-
                 viewPager.setCurrentItem(0);
                 break;
             case R.id.email:
@@ -118,6 +120,19 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 getSupportActionBar().setSubtitle("Always Stay Updated");
                 viewPager.setCurrentItem(4);
                 break;
+            case R.id.share:
+                ArrayList<String> data = new ArrayList<>();
+                data.add("Mr Room");
+                data.add("The App simplifies the Process of Searching for rental rooms in a desired Location");
+                data.add("https://play.google.com/store/apps/details?id=com.kakarooms");
+                String data1 = TextUtils.join("\n", data);
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                intent.putExtra(intent.EXTRA_TEXT, data1);
+                startActivity(intent);
+                break;
+
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
