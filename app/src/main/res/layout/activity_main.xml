@@ -16,11 +16,14 @@
         android:orientation="vertical">
 
             <android.support.v7.widget.Toolbar
-                app:titleTextColor="#ffffff"
+                app:titleTextColor="@color/white"
+                app:subtitleTextColor="@color/white"
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
+                android:background="@color/colorPrimary"
+
                 />
 
 

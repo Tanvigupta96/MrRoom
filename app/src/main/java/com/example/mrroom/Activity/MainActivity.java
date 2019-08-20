@@ -44,7 +44,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         mtoggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(mtoggle);
         mtoggle.syncState();
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("MrRoom");
+        getSupportActionBar().setSubtitle("Your Instant Room Partner");
 
         bottomNavigationView = findViewById(R.id.navigation);
         navigationView=findViewById(R.id.nav_view);
@@ -88,18 +91,31 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         switch (item.getItemId()) {
             case R.id.home:
+                getSupportActionBar().setTitle("MrRoom");
+                getSupportActionBar().setSubtitle("Your Instant Room Partner");
+
                 viewPager.setCurrentItem(0);
                 break;
             case R.id.email:
+                getSupportActionBar().setTitle("Mail us");
+                getSupportActionBar().setSubtitle("Happy to Help!");
                 viewPager.setCurrentItem(1);
                 break;
             case R.id.profile:
+                getSupportActionBar().setTitle("Profile");
+                getSupportActionBar().setSubtitle("Manage Settings");
+
                 viewPager.setCurrentItem(2);
                 break;
             case R.id.manager:
+                getSupportActionBar().setTitle("Personal Rent Manager");
+                getSupportActionBar().setSubtitle("Hey,You!");
+
                 viewPager.setCurrentItem(3);
                 break;
             case R.id.alert:
+                getSupportActionBar().setTitle("Notification");
+                getSupportActionBar().setSubtitle("Always Stay Updated");
                 viewPager.setCurrentItem(4);
                 break;
         }
